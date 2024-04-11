@@ -20,7 +20,9 @@
 
 ![alt text](image-5.png)
 
-9. Open up R Studio and create our first graph using the following code.
+9. Remove all crashes during & before WW2 as it pollutes the dataset.
+
+10. Open up R Studio and create our first graph using the following code.
 
 ```
 library(ggplot2)
@@ -31,15 +33,15 @@ PlotA <- ggplot( data = data, aes(x = Year, y = Crashes)) + geom_line()
 PlotA
 ```
 
-![](Rplot_draft3.png)
+![](crashes_after_ww2.png)
 
-10. Grab the second dataset from here https://www.statista.com/statistics/564717/airline-industry-passenger-traffic-globally/
+11. Grab the second dataset from here https://www.statista.com/statistics/564717/airline-industry-passenger-traffic-globally/
 
-11. Add the data as a new column in LibreOffice, then create a formula to calculate the number of crashes per million passengers each year.
+12. Add the data as a new column in LibreOffice, then create a formula to calculate the number of crashes per million passengers each year.
 
 ![alt text](image-6.png)
 
-9. Open up R Studio again and create the second graph using the following code.
+13. Open up R Studio again and create the second graph using the following code.
 
 ```
 library(ggplot2)
@@ -47,6 +49,7 @@ library(ggplot2)
 data <- read.csv("PlaneCrash.csv", header = TRUE)
 
 PlotA <- ggplot( data = data, aes(x = Year, y = Crashes.per.Million.Passengers)) + geom_line() + geom_smooth(method = "lm")
+PlotA
 ```
 
 ![](Rplot_draft2.png)
