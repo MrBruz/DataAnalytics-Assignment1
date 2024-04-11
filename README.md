@@ -27,7 +27,7 @@
 ```
 library(ggplot2)
 
-data <- read.csv("PlaneCrash.csv", header = TRUE)
+data <- read.csv("PlaneCrash_per_year_after_ww2.csv", header = TRUE)
 
 PlotA <- ggplot( data = data, aes(x = Year, y = Crashes)) + geom_line()
 PlotA
@@ -46,7 +46,7 @@ PlotA
 ```
 library(ggplot2)
 
-data <- read.csv("PlaneCrash.csv", header = TRUE)
+data <- read.csv("PlaneCrash_per_year_with_correlation.csv", header = TRUE)
 
 PlotA <- ggplot( data = data, aes(x = Year, y = Crashes.per.Million.Passengers)) + geom_line() + geom_smooth(method = "lm")
 PlotA
